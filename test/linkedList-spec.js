@@ -245,13 +245,13 @@ describe('Linked List Generator', function() {
         // remove last node
         urlList.remove(2);
 
-        // retrieve new node at position 2
+        // // retrieve new node at position 2
         expect(urlList.get(2)).to.be.false;
         expect(urlList.getHead().value).to.equal('news.ycombinator.com');
         expect(urlList.getTail().value).to.equal('mozilla.org');
 
-        // bookList Tests
-        //remove first node
+        // // bookList Tests
+        // //remove first node
         bookList.remove(0);
         expect(bookList.get(0).value).to.equal('1982');
         bookList.remove(1);
