@@ -36,7 +36,7 @@ function linkedListGenerator(){
 
   function get(number) {
     var curNode = head;
-    if(number < length) {
+    if(number < length) { //num is not out of bounds
       for(var i = 0; i < number; i++) {
       curNode = curNode.next;
     }
