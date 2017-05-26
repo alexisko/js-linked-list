@@ -118,12 +118,12 @@
 
             length++;
           } else {
-            nextNode = curNode.next;
+            prevNode = curNode.prev;
 
-            newNode.next = nextNode;
-            nextNode.prev = newNode;
-            curNode.next = newNode;
-            newNode.prev = curNode;
+            newNode.next = curNode;
+            curNode.prev = newNode;
+            prevNode.next = newNode;
+            newNode.prev = prevNode;
 
             length++;
           }
@@ -149,7 +149,7 @@ console.log("testing add func..");
  cll.add('dog');
  cll.add('cat');
  cll.add('bird');
-
+//cll: dog cat bird
  var head = cll.getHead();
  console.log(head.value);
  console.log(head.next.value);
@@ -166,21 +166,26 @@ console.log("testing remove func..");
 cll.remove(1);
 console.log(cll.getHead().value);
 console.log(cll.getHead().next.value);
+//cll: dog bird
 cll.remove(1);
 console.log(cll.getHead().value);
 console.log(cll.getHead().next.value);
+//cll: dog
 
 //test insert
+//cll: dog
 console.log("testing insert func..");
 cll.insert('frog', 0);
+//cll: frog dog
 console.log(cll.getHead().value);
 console.log(cll.getHead().next.value);
 
 cll.add('bird');
 cll.add('cat');
-
+//cll: frog dog bird cat
 cll.insert('mouse', 2);
 var mouse = cll.get(2);
+//cll: frog dog mouse bird cat
 console.log(mouse.value);
 console.log(mouse.prev.value);
 console.log(mouse.next.value);
