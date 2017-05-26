@@ -118,3 +118,15 @@ function doubleLinkedList() {
       insert: insert
     };
 }
+
+var dll = doubleLinkedList();
+
+dll.add('cat');
+dll.add('dog');
+dll.add('bird');
+dll.add('zebra');
+
+var tail = dll.getTail();
+
+console.log(tail.value);
+console.log(tail.prev.value);
