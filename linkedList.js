@@ -3,6 +3,7 @@
  * @description  Main Module
  * @return {Object} an object exposing methods to be used to manipulate a linked list
  */
+ //iterative
 function linkedListGenerator(){
   var head = null;
   var tail = null;
@@ -104,3 +105,57 @@ function linkedListGenerator(){
     insert
   }
 }
+
+//recursive
+// function linkedListGenerator() {
+//   var head = null;
+//   var tail = null;
+//   var length = 0;
+
+//   function getHead() {
+//     return head;
+//   }
+
+//   function getTail() {
+//     return tail;
+//   }
+
+//   function add(val) {
+//     var newNode = {
+//       value: null,
+//       next: null
+//     };
+//     if(head === null && tail === null) { //linked list is empty
+//       head = newNode;
+//       tail = newNode;
+//       newNode.value = val;
+//     } else { //linked list is not empty
+//       newNode.value = val;
+//       tail.next = newNode;
+//       tail = newNode;
+//     }
+//     length++;
+//     return newNode;
+//   }
+
+//   function get(num) {
+
+//   }
+
+//   function remove(num) {
+
+//   }
+
+//   function insert(val, num) {
+
+//   }
+
+//   return {
+//     getHead: getHead,
+//     getTail: getTail,
+//     add: add,
+//     remove: remove,
+//     get: get,
+//     insert: insert
+//   };
+// }
